@@ -10,7 +10,7 @@
 
     <DeleteCourse />
 
-    <!-- <Footer /> -->
+    <Footer />
   </div>
 </template>
 
@@ -20,6 +20,7 @@ import ListBox from './components/ListBox.vue';
 import NewCourse from './components/NewCourse.vue';
 import EditCourse from './components/EditCourse.vue';
 import DeleteCourse from './components/DeleteCourse.vue';
+import Footer from './components/Footer.vue';
 
 export default {
   name: 'App',
@@ -28,7 +29,8 @@ export default {
     ListBox,
     NewCourse, 
     EditCourse,
-    DeleteCourse
+    DeleteCourse,
+    Footer
   },
   data() {
     return {
