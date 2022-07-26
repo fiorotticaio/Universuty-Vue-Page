@@ -5,14 +5,14 @@
 
         <label for="select-couse">Selecione um curso</label>
         <select id="sel-course" name="sel-course">
+            <option value="selectCard">Selecione uma opção</option>
             <option value="engComp">Engenharia da computação</option>
             <option value="artes">Artes</option>
             <option value="mat">Matemática</option>
             <option value="filo">Filosofia</option>
         </select>
 
-        <!-- v-if="{{ selectCourse }}" -->
-        <div class="course-data">
+        <div v-if="checkSelectCourse()" class="course-data">
             <label for="name">Nome</label>
             <input type="text" id="name" name="courseName" placeholder="{{ Nome do curso }}">
     
@@ -38,6 +38,15 @@
 
 <script>
 
+function checkSelectCourse() {
+    // var card = document.getElementByName("sel-course")[0].value;
+    // if (card.value == selectCard) {
+    //     return 0;
+    // } else {
+    //     return 1;
+    // }
+}
+
 export default {
     name: 'EditCourse',
     data() {
@@ -46,7 +55,7 @@ export default {
         }
     },
     methods: {
-        
+        checkSelectCourse,
     }
 }
 </script>

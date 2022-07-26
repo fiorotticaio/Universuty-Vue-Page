@@ -12,7 +12,7 @@
         </select>
 
         <!-- v-if="{{ selectCourse }}" -->
-        <input type="submit" value="Deletar">
+        <input v-if="checkSelectCourse()" type="submit" value="Deletar">
 
 
 
@@ -23,6 +23,15 @@
 
 <script>
 
+function checkSelectCourse() {
+    // var card = document.getElementByName("sel-course")[0].value;
+    // if (card.value == selectCard) {
+    //     return 0;
+    // } else {
+    //     return 1;
+    // }
+}
+
 export default {
     name: 'DeleteCourse',
     data() {
@@ -31,7 +40,7 @@ export default {
         }
     },
     methods: {
-        
+        checkSelectCourse,
     }
 }
 </script>
